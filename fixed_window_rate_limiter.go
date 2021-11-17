@@ -1,4 +1,4 @@
-package ratelimiter
+package go_rate_limiter
 
 // NewFixedWindowRateLimiter returns a fixed window rate limiter
 func NewFixedWindowRateLimiter(conf *Config) (RateLimiter, error) {

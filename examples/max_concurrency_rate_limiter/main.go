@@ -3,11 +3,11 @@ package main
 import (
 	"time"
 
-	"github.com/jpg013/ratelimiter"
+	"github.com/mattuskoo/go_rate_limiter"
 )
 
 func main() {
-	r, err := ratelimiter.NewMaxConcurrencyRateLimiter(&ratelimiter.Config{
+	r, err := go_rate_limiter.NewMaxConcurrencyRateLimiter(&go_rate_limiter.Config{
 		Limit:            4,
 		TokenResetsAfter: 10 * time.Second,
 	})
@@ -16,5 +16,5 @@ func main() {
 		panic(err)
 	}
 
-	ratelimiter.DoWork(r, 10)
+	go_rate_limiter.DoWork(r, 10)
 }

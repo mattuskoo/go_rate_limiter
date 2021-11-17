@@ -1,4 +1,4 @@
-package ratelimiter
+package go_rate_limiter
 
 // NewMaxConcurrencyRateLimiter returns a max concurrency rate limiter
 func NewMaxConcurrencyRateLimiter(conf *Config) (RateLimiter, error) {

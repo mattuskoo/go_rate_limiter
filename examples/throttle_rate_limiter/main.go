@@ -3,11 +3,11 @@ package main
 import (
 	"time"
 
-	"github.com/jpg013/ratelimiter"
+	"github.com/mattuskoo/go_rate_limiter"
 )
 
 func main() {
-	r, err := ratelimiter.NewThrottleRateLimiter(&ratelimiter.Config{
+	r, err := go_rate_limiter.NewThrottleRateLimiter(&go_rate_limiter.Config{
 		Throttle: 1 * time.Second,
 	})
 
@@ -15,5 +15,5 @@ func main() {
 		panic(err)
 	}
 
-	ratelimiter.DoWork(r, 10)
+	go_rate_limiter.DoWork(r, 10)
 }

@@ -1,4 +1,4 @@
-package ratelimiter
+package go_rate_limiter
 
 import (
 	"fmt"

@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	r, err := ratelimiter.NewFixedWindowRateLimiter(&ratelimiter.Config{
+	r, err := go_rate_limiter.NewFixedWindowRateLimiter(&go_rate_limiter.Config{
 		Limit:         5,
 		FixedInterval: 15 * time.Second,
 	})
@@ -16,5 +16,5 @@ func main() {
 		panic(err)
 	}
 
-	ratelimiter.DoWork(r, 10)
+	go_rate_limiter.DoWork(r, 10)
 }
